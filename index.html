@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Express | Begoña García — Desarrollador Web Full Stack</title>
+  <meta
+    name="description"
+    content="Portfolio Express de Begoña García, Desarrollador Web Full Stack especializada en HTML, CSS, JavaScript y Creación de apps modernas."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera de Navegación -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo" id="brand-logo">
+        <span class="brand-mark">BG</span>
+        <span>Portfolio Express</span>
+      </a>
+
+      <button
+        class="mobile-menu-btn"
+        id="mobile-menu-btn"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Principal -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-label">Portfolio Express</span>
+          <h1 class="hero-title" id="hero-name">Begoña García</h1>
+          <p class="hero-subtitle" id="hero-role">Desarrollador Web Full Stack</p>
+          <p class="hero-description">
+            Diseño y desarrollo aplicaciones web rápidas, accesibles y escalables,
+            cuidando tanto la experiencia de usuario como la arquitectura del código.
+          </p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary" id="btn-ver-proyectos">
+              <span>Ver proyectos</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#sobre-mi" class="btn btn-secondary" id="btn-conocer-mas">Sobre mí</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumen profesional">
+          <div class="profile-avatar" aria-hidden="true">BG</div>
+          <h2 class="hero-card-title">Arquitectura limpia &amp; diseño funcional</h2>
+          <p class="hero-card-text">
+            Transformo ideas en productos digitales completos: desde interfaces responsive hasta aplicaciones interactivas listas para producción.
+          </p>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Diseño Responsive</div>
+            </div>
+            <div>
+              <div class="stat-value">Full Stack</div>
+              <div class="stat-label">Web &amp; Apps</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Sección: Sobre mí -->
+    <section class="section section-alt" id="sobre-mi">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Perfil Profesional</span>
+          <h2 class="section-title">Sobre mí</h2>
+          <p class="section-subtitle">
+            Apasionada por crear soluciones digitales claras, modernas y orientadas a las personas.
+          </p>
+        </div>
+
+        <div class="about-wrapper">
+          <article class="about-card">
+            <p class="about-text">
+              ¡Hola! Soy <strong>Begoña García</strong>, Desarrollador Web Full Stack con enfoque en la construcción de experiencias web modernas, rápidas y fáciles de mantener. Me gusta combinar un diseño visual limpio con código bien estructurado.
+            </p>
+            <p class="about-text">
+              Trabajo en todo el ciclo de vida de un proyecto digital: maquetación semántica en HTML, sistemas de diseño adaptables en CSS, lógica interactiva en JavaScript y creación de aplicaciones completas pensadas para resolver problemas reales en cualquier dispositivo.
+            </p>
+          </article>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">Código Limpio y Escalable</h3>
+                <p class="highlight-desc">Buenas prácticas, estándares web actuales y componentes reutilizables.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">Enfoque Mobile-First</h3>
+                <p class="highlight-desc">Interfaces adaptadas con precisión a móviles, tablets y pantallas de escritorio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Habilidades -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Competencias Técnicas</span>
+          <h2 class="section-title">Habilidades</h2>
+          <p class="section-subtitle">
+            Tecnologías y áreas principales con las que construyo proyectos web y aplicaciones.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Tarjeta 1: CSS -->
+          <article class="skill-card" id="skill-css">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <p class="skill-description">
+              Diseño responsive con Flexbox, CSS Grid, variables personalizadas, animaciones fluidas y sistemas visuales modernos.
+            </p>
+            <span class="skill-tag">Estilos &amp; Layout</span>
+          </article>
+
+          <!-- Tarjeta 2: HTML -->
+          <article class="skill-card" id="skill-html">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-name">HTML</h3>
+            <p class="skill-description">
+              Estructura semántica HTML5, accesibilidad web (ARIA), optimización SEO en página y jerarquía clara de contenidos.
+            </p>
+            <span class="skill-tag">Estructura Semántica</span>
+          </article>
+
+          <!-- Tarjeta 3: Java Script -->
+          <article class="skill-card" id="skill-js">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="skill-name">Java Script</h3>
+            <p class="skill-description">
+              Interactividad dinámica, manipulación del DOM, consumo de APIs asíncronas y lógica moderna con ES6+.
+            </p>
+            <span class="skill-tag">Lógica &amp; Dinamismo</span>
+          </article>
+
+          <!-- Tarjeta 4: Creación de apps -->
+          <article class="skill-card" id="skill-apps">
+            <div class="skill-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="skill-name">Creación de apps</h3>
+            <p class="skill-description">
+              Desarrollo integral de aplicaciones web interactivas, desde el prototipo inicial hasta su despliegue en producción.
+            </p>
+            <span class="skill-tag">Full Stack Apps</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Proyectos -->
+    <section class="section section-alt" id="proyectos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Trabajos Destacados</span>
+          <h2 class="section-title">Proyectos</h2>
+          <p class="section-subtitle">
+            Una selección de 3 proyectos de ejemplo que muestran el desarrollo de interfaces y aplicaciones completas.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card" id="project-card-1">
+            <div class="project-preview preview-ecommerce">
+              <span class="project-category">Aplicación Web</span>
+              <div class="project-mockup-bar">
+                <span>Tienda Natura Market</span>
+                <span>v2.4</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Plataforma E-Commerce Express</h3>
+              <p class="project-description">
+                Tienda online con catálogo filtrable en tiempo real, carrito persistente y proceso de compra optimizado para móvil.
+              </p>
+              <ul class="project-tech-list" aria-label="Tecnologías usadas">
+                <li class="project-tech-item">HTML</li>
+                <li class="project-tech-item">CSS</li>
+                <li class="project-tech-item">Java Script</li>
+              </ul>
+              <button
+                type="button"
+                class="project-link-btn"
+                data-project-title="Plataforma E-Commerce Express"
+                data-project-detail="Incluye filtrado instantáneo por categorías, carrito de compras con almacenamiento local, diseño adaptable y tiempos de carga reducidos."
+              >
+                <span>Ver detalles</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card" id="project-card-2">
+            <div class="project-preview preview-taskapp">
+              <span class="project-category">Creación de apps</span>
+              <div class="project-mockup-bar">
+                <span>TaskFlow Studio</span>
+                <span>App Activa</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gestor de Tareas Colaborativo</h3>
+              <p class="project-description">
+                Aplicación para organizar proyectos por tableros, priorizar entregas y hacer seguimiento del progreso diario de equipos.
+              </p>
+              <ul class="project-tech-list" aria-label="Tecnologías usadas">
+                <li class="project-tech-item">Creación de apps</li>
+                <li class="project-tech-item">Java Script</li>
+                <li class="project-tech-item">CSS Grid</li>
+              </ul>
+              <button
+                type="button"
+                class="project-link-btn"
+                data-project-title="Gestor de Tareas Colaborativo"
+                data-project-detail="Permite crear tareas con estados personalizados, búsqueda instantánea, métricas de avance y experiencia fluida en escritorio y móvil."
+              >
+                <span>Ver detalles</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card" id="project-card-3">
+            <div class="project-preview preview-analytics">
+              <span class="project-category">Full Stack Web</span>
+              <div class="project-mockup-bar">
+                <span>Clima &amp; Rutas App</span>
+                <span>API Live</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">App de Reservas y Eventos</h3>
+              <p class="project-description">
+                Sistema interactivo para descubrir actividades locales, consultar disponibilidad en vivo y gestionar reservas en pocos clics.
+              </p>
+              <ul class="project-tech-list" aria-label="Tecnologías usadas">
+                <li class="project-tech-item">HTML</li>
+                <li class="project-tech-item">CSS</li>
+                <li class="project-tech-item">Creación de apps</li>
+              </ul>
+              <button
+                type="button"
+                class="project-link-btn"
+                data-project-title="App de Reservas y Eventos"
+                data-project-detail="Conecta con servicios de calendario, validación de formularios en tiempo real y confirmación instantánea para los usuarios."
+              >
+                <span>Ver detalles</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Final: Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-card">
+          <span class="section-eyebrow">Hablemos</span>
+          <h2 class="contact-title">¿Tienes un proyecto o idea en mente?</h2>
+          <p class="contact-description">
+            Estoy disponible para colaborar en nuevos desarrollos web, creación de aplicaciones o mejoras de interfaz. ¡Escríbeme y conversemos!
+          </p>
+          <button type="button" class="btn btn-primary" id="btn-contactar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Contactar</span>
+          </button>
+          <div class="contact-meta">
+            <span>begona.garcia@portfolioexpress.dev</span>
+            <span>&bull;</span>
+            <span>España &middot; Remoto / Híbrido</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p><strong>Portfolio Express</strong> &mdash; Begoña García &copy; <span id="current-year">2026</span></p>
+      <p>Desarrollador Web Full Stack</p>
+    </div>
+  </footer>
+
+  <!-- Modal Interactivo de Contacto / Detalles -->
+  <div class="modal-backdrop" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Contactar con Begoña García</h3>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Cerrar ventana">&times;</button>
+      </div>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label class="form-label" for="sender-name">Nombre</label>
+          <input class="form-input" type="text" id="sender-name" name="name" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sender-email">Correo electrónico</label>
+          <input class="form-input" type="email" id="sender-email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sender-message">Mensaje</label>
+          <textarea class="form-textarea" id="sender-message" name="message" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;" id="btn-enviar-mensaje">
+          Enviar mensaje
+        </button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
