@@ -11,18 +11,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Cabecera de Navegación -->
+  <!-- Halos de luz ambiental futurista sobre fondo claro -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- Cabecera de Navegación Flotante (Glassmorphism) -->
   <header class="site-header" id="site-header">
     <div class="container nav-container">
       <a href="#inicio" class="brand-logo" id="brand-logo">
         <span class="brand-mark">BG</span>
-        <span>Portfolio Express</span>
+        <span class="brand-text">Portfolio Express</span>
+        <span class="brand-version">v2.6</span>
       </a>
 
       <button
@@ -41,10 +46,10 @@
 
       <nav aria-label="Navegación principal">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li><a href="#sobre-mi" class="nav-link"><span class="nav-index">01</span>Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav-link"><span class="nav-index">02</span>Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link"><span class="nav-index">03</span>Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link"><span class="nav-index">04</span>Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -55,13 +60,19 @@
     <section class="hero-section" id="inicio">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="hero-label">Portfolio Express</span>
+          <div class="tech-tag-row">
+            <span class="tech-code">SYS.PORTFOLIO // EXPRESS</span>
+            <span class="tech-divider"></span>
+            <span class="tech-coords">FULL STACK ARCHITECTURE</span>
+          </div>
+
           <h1 class="hero-title" id="hero-name">Begoña García</h1>
           <p class="hero-subtitle" id="hero-role">Desarrollador Web Full Stack</p>
           <p class="hero-description">
-            Diseño y desarrollo aplicaciones web rápidas, accesibles y escalables,
-            cuidando tanto la experiencia de usuario como la arquitectura del código.
+            Diseño y construyo experiencias digitales de nueva generación: interfaces
+            ultraligeras, arquitectura limpia y aplicaciones interactivas listas para el futuro.
           </p>
+
           <div class="hero-actions">
             <a href="#proyectos" class="btn btn-primary" id="btn-ver-proyectos">
               <span>Ver proyectos</span>
@@ -70,24 +81,56 @@
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#sobre-mi" class="btn btn-secondary" id="btn-conocer-mas">Sobre mí</a>
+            <a href="#sobre-mi" class="btn btn-secondary" id="btn-conocer-mas">
+              <span>Sobre mí</span>
+            </a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Resumen profesional">
-          <div class="profile-avatar" aria-hidden="true">BG</div>
-          <h2 class="hero-card-title">Arquitectura limpia &amp; diseño funcional</h2>
-          <p class="hero-card-text">
-            Transformo ideas en productos digitales completos: desde interfaces responsive hasta aplicaciones interactivas listas para producción.
-          </p>
-          <div class="hero-stats">
+        <!-- Panel HUD Futurista -->
+        <aside class="hero-card spotlight-card" aria-label="Panel técnico profesional">
+          <div class="hud-top-bar">
+            <span class="hud-id">ID // BG-DEV-01</span>
+            <span class="hud-badge">ESTADO: ONLINE</span>
+          </div>
+
+          <div class="profile-header">
+            <div class="profile-avatar" aria-hidden="true">BG</div>
             <div>
-              <div class="stat-value">100%</div>
-              <div class="stat-label">Diseño Responsive</div>
+              <h2 class="hero-card-title">Núcleo de Desarrollo</h2>
+              <p class="hero-card-sub">Web &amp; App Engineering</p>
             </div>
-            <div>
-              <div class="stat-value">Full Stack</div>
-              <div class="stat-label">Web &amp; Apps</div>
+          </div>
+
+          <p class="hero-card-text">
+            Combinación de precisión técnica, estética futurista minimalista y rendimiento óptimo en cada línea de código.
+          </p>
+
+          <div class="hud-meters">
+            <div class="meter-row">
+              <div class="meter-label">
+                <span>Frontend &amp; UI Systems</span>
+                <span class="mono-val">98%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" style="width: 98%;"></div></div>
+            </div>
+            <div class="meter-row">
+              <div class="meter-label">
+                <span>Full Stack &amp; Apps</span>
+                <span class="mono-val">95%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" style="width: 95%;"></div></div>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Responsive UI</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">Escalabilidad</div>
             </div>
           </div>
         </aside>
@@ -98,25 +141,26 @@
     <section class="section section-alt" id="sobre-mi">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Perfil Profesional</span>
+          <span class="section-eyebrow">01 // PERFIL PROFESIONAL</span>
           <h2 class="section-title">Sobre mí</h2>
           <p class="section-subtitle">
-            Apasionada por crear soluciones digitales claras, modernas y orientadas a las personas.
+            Innovación, claridad visual y desarrollo orientado al rendimiento.
           </p>
         </div>
 
         <div class="about-wrapper">
-          <article class="about-card">
+          <article class="about-card spotlight-card">
+            <div class="card-corner-tag">BIO.LOG // 2026</div>
             <p class="about-text">
-              ¡Hola! Soy <strong>Begoña García</strong>, Desarrollador Web Full Stack con enfoque en la construcción de experiencias web modernas, rápidas y fáciles de mantener. Me gusta combinar un diseño visual limpio con código bien estructurado.
+              ¡Hola! Soy <strong>Begoña García</strong>, Desarrollador Web Full Stack apasionada por transformar conceptos complejos en interfaces intuitivas, veloces y con una identidad visual vanguardista.
             </p>
             <p class="about-text">
-              Trabajo en todo el ciclo de vida de un proyecto digital: maquetación semántica en HTML, sistemas de diseño adaptables en CSS, lógica interactiva en JavaScript y creación de aplicaciones completas pensadas para resolver problemas reales en cualquier dispositivo.
+              Abarco todo el ecosistema de creación digital: desde la estructura semántica en <strong>HTML</strong> y sistemas visuales avanzados en <strong>CSS</strong>, hasta lógica reactiva en <strong>JavaScript</strong> y la <strong>creación de apps</strong> completas adaptadas a cualquier pantalla.
             </p>
           </article>
 
           <div class="about-highlights">
-            <div class="highlight-item">
+            <div class="highlight-item spotlight-card">
               <div class="highlight-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="16 18 22 12 16 6"></polyline>
@@ -124,12 +168,12 @@
                 </svg>
               </div>
               <div>
-                <h3 class="highlight-title">Código Limpio y Escalable</h3>
-                <p class="highlight-desc">Buenas prácticas, estándares web actuales y componentes reutilizables.</p>
+                <h3 class="highlight-title">Arquitectura Modular</h3>
+                <p class="highlight-desc">Código limpio, mantenible y preparado para escalar con nuevas tecnologías.</p>
               </div>
             </div>
 
-            <div class="highlight-item">
+            <div class="highlight-item spotlight-card">
               <div class="highlight-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
@@ -137,8 +181,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="highlight-title">Enfoque Mobile-First</h3>
-                <p class="highlight-desc">Interfaces adaptadas con precisión a móviles, tablets y pantallas de escritorio.</p>
+                <h3 class="highlight-title">Experiencia Multidispositivo</h3>
+                <p class="highlight-desc">Adaptación fluida desde móviles hasta pantallas de alta resolución.</p>
               </div>
             </div>
           </div>
@@ -150,74 +194,98 @@
     <section class="section" id="habilidades">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Competencias Técnicas</span>
+          <span class="section-eyebrow">02 // STACK TECNOLÓGICO</span>
           <h2 class="section-title">Habilidades</h2>
           <p class="section-subtitle">
-            Tecnologías y áreas principales con las que construyo proyectos web y aplicaciones.
+            Módulos y tecnologías clave con las que diseño y desarrollo soluciones digitales.
           </p>
         </div>
 
         <div class="skills-grid">
           <!-- Tarjeta 1: CSS -->
-          <article class="skill-card" id="skill-css">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
-              </svg>
+          <article class="skill-card spotlight-card" id="skill-css">
+            <div class="skill-card-top">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="skill-code">MOD // 01</span>
             </div>
             <h3 class="skill-name">CSS</h3>
             <p class="skill-description">
-              Diseño responsive con Flexbox, CSS Grid, variables personalizadas, animaciones fluidas y sistemas visuales modernos.
+              Sistemas de diseño con CSS Grid, Flexbox, efectos glassmorphism, micro-interacciones y layouts responsive de alta precisión.
             </p>
-            <span class="skill-tag">Estilos &amp; Layout</span>
+            <div class="skill-footer">
+              <span class="skill-tag">UI &amp; Animación</span>
+              <span class="skill-level">AVANZADO</span>
+            </div>
           </article>
 
           <!-- Tarjeta 2: HTML -->
-          <article class="skill-card" id="skill-html">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
+          <article class="skill-card spotlight-card" id="skill-html">
+            <div class="skill-card-top">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-code">MOD // 02</span>
             </div>
             <h3 class="skill-name">HTML</h3>
             <p class="skill-description">
-              Estructura semántica HTML5, accesibilidad web (ARIA), optimización SEO en página y jerarquía clara de contenidos.
+              Maquetación semántica HTML5, estándares de accesibilidad (ARIA), estructura limpia y optimización técnica para buscadores.
             </p>
-            <span class="skill-tag">Estructura Semántica</span>
+            <div class="skill-footer">
+              <span class="skill-tag">Semántica Web</span>
+              <span class="skill-level">AVANZADO</span>
+            </div>
           </article>
 
           <!-- Tarjeta 3: Java Script -->
-          <article class="skill-card" id="skill-js">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
+          <article class="skill-card spotlight-card" id="skill-js">
+            <div class="skill-card-top">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="skill-code">MOD // 03</span>
             </div>
             <h3 class="skill-name">Java Script</h3>
             <p class="skill-description">
-              Interactividad dinámica, manipulación del DOM, consumo de APIs asíncronas y lógica moderna con ES6+.
+              Programación moderna con ES6+, control dinámico del DOM, consumo de APIs en tiempo real y experiencias interactivas fluidas.
             </p>
-            <span class="skill-tag">Lógica &amp; Dinamismo</span>
+            <div class="skill-footer">
+              <span class="skill-tag">Motor Lógico</span>
+              <span class="skill-level">AVANZADO</span>
+            </div>
           </article>
 
           <!-- Tarjeta 4: Creación de apps -->
-          <article class="skill-card" id="skill-apps">
-            <div class="skill-icon-box" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-              </svg>
+          <article class="skill-card spotlight-card" id="skill-apps">
+            <div class="skill-card-top">
+              <div class="skill-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                </svg>
+              </div>
+              <span class="skill-code">MOD // 04</span>
             </div>
             <h3 class="skill-name">Creación de apps</h3>
             <p class="skill-description">
-              Desarrollo integral de aplicaciones web interactivas, desde el prototipo inicial hasta su despliegue en producción.
+              Desarrollo integral de aplicaciones web de principio a fin, integrando interfaz, lógica de negocio y despliegue en la nube.
             </p>
-            <span class="skill-tag">Full Stack Apps</span>
+            <div class="skill-footer">
+              <span class="skill-tag">Full Stack Apps</span>
+              <span class="skill-level">ESPECIALISTA</span>
+            </div>
           </article>
         </div>
       </div>
@@ -227,27 +295,30 @@
     <section class="section section-alt" id="proyectos">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Trabajos Destacados</span>
+          <span class="section-eyebrow">03 // LABORATORIO DIGITAL</span>
           <h2 class="section-title">Proyectos</h2>
           <p class="section-subtitle">
-            Una selección de 3 proyectos de ejemplo que muestran el desarrollo de interfaces y aplicaciones completas.
+            3 aplicaciones de ejemplo diseñadas con arquitectura moderna y enfoque en la experiencia de usuario.
           </p>
         </div>
 
         <div class="projects-grid">
           <!-- Proyecto 1 -->
-          <article class="project-card" id="project-card-1">
+          <article class="project-card spotlight-card" id="project-card-1">
             <div class="project-preview preview-ecommerce">
-              <span class="project-category">Aplicación Web</span>
+              <div class="preview-top-row">
+                <span class="project-category">PRJ // 01</span>
+                <span class="project-status">DEPLOYED</span>
+              </div>
               <div class="project-mockup-bar">
-                <span>Tienda Natura Market</span>
-                <span>v2.4</span>
+                <span>NeoMarket UI</span>
+                <span class="mono-val">v2.4</span>
               </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Plataforma E-Commerce Express</h3>
               <p class="project-description">
-                Tienda online con catálogo filtrable en tiempo real, carrito persistente y proceso de compra optimizado para móvil.
+                Tienda digital inteligente con filtrado instantáneo, carrito persistente y pasarela de experiencia móvil ultrarrápida.
               </p>
               <ul class="project-tech-list" aria-label="Tecnologías usadas">
                 <li class="project-tech-item">HTML</li>
@@ -260,30 +331,33 @@
                 data-project-title="Plataforma E-Commerce Express"
                 data-project-detail="Incluye filtrado instantáneo por categorías, carrito de compras con almacenamiento local, diseño adaptable y tiempos de carga reducidos."
               >
-                <span>Ver detalles</span>
+                <span>Explorar sistema</span>
                 <span aria-hidden="true">&rarr;</span>
               </button>
             </div>
           </article>
 
           <!-- Proyecto 2 -->
-          <article class="project-card" id="project-card-2">
+          <article class="project-card spotlight-card" id="project-card-2">
             <div class="project-preview preview-taskapp">
-              <span class="project-category">Creación de apps</span>
+              <div class="preview-top-row">
+                <span class="project-category">PRJ // 02</span>
+                <span class="project-status">ACTIVE</span>
+              </div>
               <div class="project-mockup-bar">
-                <span>TaskFlow Studio</span>
-                <span>App Activa</span>
+                <span>TaskFlow Quantum</span>
+                <span class="mono-val">SYNC</span>
               </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Gestor de Tareas Colaborativo</h3>
               <p class="project-description">
-                Aplicación para organizar proyectos por tableros, priorizar entregas y hacer seguimiento del progreso diario de equipos.
+                Aplicación interactiva para coordinar flujos de trabajo por tableros, automatizar prioridades y visualizar métricas en vivo.
               </p>
               <ul class="project-tech-list" aria-label="Tecnologías usadas">
                 <li class="project-tech-item">Creación de apps</li>
                 <li class="project-tech-item">Java Script</li>
-                <li class="project-tech-item">CSS Grid</li>
+                <li class="project-tech-item">CSS</li>
               </ul>
               <button
                 type="button"
@@ -291,25 +365,28 @@
                 data-project-title="Gestor de Tareas Colaborativo"
                 data-project-detail="Permite crear tareas con estados personalizados, búsqueda instantánea, métricas de avance y experiencia fluida en escritorio y móvil."
               >
-                <span>Ver detalles</span>
+                <span>Explorar sistema</span>
                 <span aria-hidden="true">&rarr;</span>
               </button>
             </div>
           </article>
 
           <!-- Proyecto 3 -->
-          <article class="project-card" id="project-card-3">
+          <article class="project-card spotlight-card" id="project-card-3">
             <div class="project-preview preview-analytics">
-              <span class="project-category">Full Stack Web</span>
+              <div class="preview-top-row">
+                <span class="project-category">PRJ // 03</span>
+                <span class="project-status">LIVE API</span>
+              </div>
               <div class="project-mockup-bar">
-                <span>Clima &amp; Rutas App</span>
-                <span>API Live</span>
+                <span>Aether Booking Hub</span>
+                <span class="mono-val">v3.1</span>
               </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">App de Reservas y Eventos</h3>
               <p class="project-description">
-                Sistema interactivo para descubrir actividades locales, consultar disponibilidad en vivo y gestionar reservas en pocos clics.
+                Plataforma en tiempo real para explorar eventos, verificar disponibilidad al instante y gestionar reservas con confirmación inmediata.
               </p>
               <ul class="project-tech-list" aria-label="Tecnologías usadas">
                 <li class="project-tech-item">HTML</li>
@@ -322,7 +399,7 @@
                 data-project-title="App de Reservas y Eventos"
                 data-project-detail="Conecta con servicios de calendario, validación de formularios en tiempo real y confirmación instantánea para los usuarios."
               >
-                <span>Ver detalles</span>
+                <span>Explorar sistema</span>
                 <span aria-hidden="true">&rarr;</span>
               </button>
             </div>
@@ -334,11 +411,11 @@
     <!-- Sección Final: Contacto -->
     <section class="section" id="contacto">
       <div class="container">
-        <div class="contact-card">
-          <span class="section-eyebrow">Hablemos</span>
-          <h2 class="contact-title">¿Tienes un proyecto o idea en mente?</h2>
+        <div class="contact-card spotlight-card">
+          <span class="section-eyebrow">04 // CANAL DE CONEXIÓN</span>
+          <h2 class="contact-title">¿Construimos el próximo gran proyecto?</h2>
           <p class="contact-description">
-            Estoy disponible para colaborar en nuevos desarrollos web, creación de aplicaciones o mejoras de interfaz. ¡Escríbeme y conversemos!
+            Disponible para desarrollar aplicaciones web completas, arquitecturas frontend modernas y experiencias interactivas a medida.
           </p>
           <button type="button" class="btn btn-primary" id="btn-contactar">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -349,8 +426,8 @@
           </button>
           <div class="contact-meta">
             <span>begona.garcia@portfolioexpress.dev</span>
-            <span>&bull;</span>
-            <span>España &middot; Remoto / Híbrido</span>
+            <span>//</span>
+            <span>CONEXIÓN REMOTA &amp; HÍBRIDA</span>
           </div>
         </div>
       </div>
@@ -361,7 +438,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <p><strong>Portfolio Express</strong> &mdash; Begoña García &copy; <span id="current-year">2026</span></p>
-      <p>Desarrollador Web Full Stack</p>
+      <p class="footer-tech">SYS.STATUS: OPERATIONAL // FULL STACK DEVELOPER</p>
     </div>
   </footer>
 
@@ -369,7 +446,10 @@
   <div class="modal-backdrop" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">Contactar con Begoña García</h3>
+        <div>
+          <span class="modal-eyebrow">TRANSMISIÓN DIRECTA</span>
+          <h3 class="modal-title" id="modal-title">Contactar con Begoña García</h3>
+        </div>
         <button type="button" class="modal-close" id="modal-close-btn" aria-label="Cerrar ventana">&times;</button>
       </div>
 
@@ -384,7 +464,7 @@
         </div>
         <div class="form-group">
           <label class="form-label" for="sender-message">Mensaje</label>
-          <textarea class="form-textarea" id="sender-message" name="message" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          <textarea class="form-textarea" id="sender-message" name="message" rows="4" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="width: 100%;" id="btn-enviar-mensaje">
           Enviar mensaje

@@ -1,6 +1,6 @@
 /**
  * Portfolio Express — Begoña García
- * Interactividad principal: menú móvil, navegación activa, modal de contacto y vista rápida de proyectos
+ * Interactividad futurista: efecto spotlight en tarjetas, menú móvil, y modal de transmisión directa
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,13 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.getElementById('modal-title');
   const messageInput = document.getElementById('sender-message');
   const projectButtons = document.querySelectorAll('.project-link-btn');
+  const spotlightCards = document.querySelectorAll('.spotlight-card');
   const yearSpan = document.getElementById('current-year');
 
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // 1. Sombra en la cabecera al hacer scroll
+  // 1. Efecto Spotlight futurista que sigue al cursor sobre cada tarjeta
+  spotlightCards.forEach((card) => {
+    card.addEventListener('mousemove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // 2. Sombra en la cabecera al hacer scroll
   const handleScroll = () => {
     if (window.scrollY > 12) {
       header.classList.add('scrolled');
@@ -34,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 2. Menú desplegable para móvil
+  // 3. Menú desplegable para móvil
   if (mobileMenuBtn && navLinksContainer) {
     mobileMenuBtn.addEventListener('click', () => {
       const isOpen = navLinksContainer.classList.toggle('open');
@@ -49,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Apertura y cierre del modal de contacto
+  // 4. Apertura y cierre del modal de contacto
   const openModal = (customTitle, prefilledMessage = '') => {
     if (!contactModal) return;
     modalTitle.textContent = customTitle || 'Contactar con Begoña García';
@@ -91,24 +103,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Botones "Ver detalles" en las 3 tarjetas de proyectos
+  // 5. Botones "Explorar sistema" en las 3 tarjetas de proyectos
   projectButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const title = button.getAttribute('data-project-title') || 'Proyecto';
       const detail = button.getAttribute('data-project-detail') || '';
       openModal(
-        `Proyecto: ${title}`,
+        `Sistema: ${title}`,
         `Hola Begoña, me gustaría conocer más sobre "${title}". (${detail})`
       );
     });
   });
 
-  // 5. Envío simulado del formulario de contacto
+  // 6. Envío simulado del formulario de contacto
   if (contactForm) {
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const nameValue = document.getElementById('sender-name')?.value.trim() || 'visitante';
-      formStatus.textContent = `¡Gracias, ${nameValue}! Tu mensaje ha sido enviado correctamente.`;
+      formStatus.textContent = `TRANSMISIÓN COMPLETADA // ¡Gracias, ${nameValue}! Tu mensaje ha sido recibido.`;
       formStatus.classList.add('visible');
       contactForm.reset();
 
